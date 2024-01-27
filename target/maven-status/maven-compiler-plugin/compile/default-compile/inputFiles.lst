@@ -1,0 +1,13 @@
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/service/BookService.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/repository/BookRepository.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/service/PatronService.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/controllers/BorrowingRecordController.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/controllers/BookController.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/model/Book.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/model/Patron.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/controllers/PatronController.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/service/BorrowingRecordService.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/LibraryManagementApplication.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/repository/BorrowingRecordRepository.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/model/BorrowingRecord.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/repository/PatronRepository.java
