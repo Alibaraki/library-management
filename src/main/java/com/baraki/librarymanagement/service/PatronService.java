@@ -4,6 +4,7 @@ import com.baraki.librarymanagement.model.Patron;
 import com.baraki.librarymanagement.repository.PatronRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,6 +44,7 @@ public class PatronService {
      * @param patron the patron to be saved.
      * @return the saved patron.
      */
+    @Transactional
     public Patron savePatron(Patron patron) {
         return patronRepository.save(patron);
     }
@@ -53,6 +55,7 @@ public class PatronService {
      * @param newPatronDetails patron object containing new details.
      * @return the updated patron.
      */
+    @Transactional
     public Optional<Patron> updatePatron(Long patronId, Patron newPatronDetails) {
         return patronRepository.findById(patronId).map(patron -> {
             patron.setName(newPatronDetails.getName());
@@ -65,6 +68,7 @@ public class PatronService {
      * Deletes a patron from the repository.
      * @param id the ID of the patron to be deleted.
      */
+    @Transactional
     public void deletePatron(Long id) {
         patronRepository.deleteById(id);
     }

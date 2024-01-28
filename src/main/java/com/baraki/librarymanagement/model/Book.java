@@ -8,6 +8,8 @@ import java.util.List;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 
 
 @Entity
@@ -29,6 +31,8 @@ public class Book implements Serializable {
     private String author;
 
     @NotNull(message = "Publication year is required")
+    @Min(value = 1450, message = "Publication year must be no earlier than 1450") // Assuming books weren't published before this year.
+    @Max(value = 2100, message = "Publication year must be no later than 2100")   // Future year constraint.
     @Column(name = "publication_year", nullable = false)
     private Integer publicationYear;
 

@@ -4,6 +4,7 @@ import com.baraki.librarymanagement.model.BorrowingRecord;
 import com.baraki.librarymanagement.repository.BorrowingRecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,6 +44,8 @@ public class BorrowingRecordService {
      * @param borrowingRecord the borrowing record to be saved.
      * @return the saved borrowing record.
      */
+
+    @Transactional
     public BorrowingRecord saveBorrowingRecord(BorrowingRecord borrowingRecord) {
         return borrowingRecordRepository.save(borrowingRecord);
     }
@@ -51,6 +54,7 @@ public class BorrowingRecordService {
      * Deletes a borrowing record from the repository.
      * @param id the ID of the borrowing record to be deleted.
      */
+    @Transactional
     public void deleteBorrowingRecord(Long id) {
         borrowingRecordRepository.deleteById(id);
     }

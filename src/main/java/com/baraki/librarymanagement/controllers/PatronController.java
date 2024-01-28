@@ -67,9 +67,9 @@ public class PatronController {
      * or with status 500 (Internal Server Error) if the patron couldn't be updated.
      */
     @PutMapping("/{id}")
-    public ResponseEntity<Patron> updatePatron(@PathVariable Long id, @RequestBody Patron patronDetails) {
-        if (patronDetails.getId() == null) {
-            return ResponseEntity.badRequest().body(null); // ID is required for update
+    public ResponseEntity<Patron> updatePatron(@PathVariable Long id, @Valid @RequestBody Patron patronDetails) {
+        if (patronDetails.getId() == null || !patronDetails.getId().equals(id)) {
+            return ResponseEntity.badRequest().build(); // ID mismatch or missing ID in the request body
         }
         return patronService.updatePatron(id, patronDetails)
                 .map(updatedPatron -> ResponseEntity.ok().body(updatedPatron))

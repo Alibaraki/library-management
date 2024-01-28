@@ -68,9 +68,9 @@ public class BorrowingRecordController {
      * or with status 500 (Internal Server Error) if the borrowing record couldn't be updated.
      */
     @PutMapping("/{id}")
-    public ResponseEntity<BorrowingRecord> updateBorrowingRecord(@PathVariable Long id,@Valid @RequestBody BorrowingRecord borrowingRecordDetails) {
-        if (borrowingRecordDetails.getId() == null) {
-            return ResponseEntity.badRequest().body(null); // ID is required for update
+    public ResponseEntity<BorrowingRecord> updateBorrowingRecord(@PathVariable Long id, @Valid @RequestBody BorrowingRecord borrowingRecordDetails) {
+        if (borrowingRecordDetails.getId() == null || !borrowingRecordDetails.getId().equals(id)) {
+            return ResponseEntity.badRequest().build(); // ID mismatch or missing ID in the request body
         }
         BorrowingRecord result = borrowingRecordService.saveBorrowingRecord(borrowingRecordDetails);
         return ResponseEntity.ok().body(result);

@@ -51,10 +51,7 @@ public class BookController {
      * @return the ResponseEntity with status 201 (Created) and with body the new book, or with status 400 (Bad Request) if the book has already an ID.
      */
     @PostMapping
-    public ResponseEntity<Book> createBook(@RequestBody Book book) {
-        if (book.getId() != null) {
-            return ResponseEntity.badRequest().body(null); // Ideally, you should include a message about why it's a bad request
-        }
+    public ResponseEntity<Book> createBook(@Valid @RequestBody Book book) {
         Book result = bookService.saveBook(book);
         return ResponseEntity.created(URI.create("/api/books/" + result.getId())).body(result);
     }
@@ -68,11 +65,11 @@ public class BookController {
      * or with status 500 (Internal Server Error) if the book couldn't be updated.
      */
     @PutMapping("/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody Book book) {
-        if (book.getId() == null) {
-            return ResponseEntity.badRequest().body(null); // ID is required for update
+    public ResponseEntity<Book> updateBook(@PathVariable Long id, @Valid @RequestBody Book book) {
+        if (book.getId() == null || !book.getId().equals(id)) {
+            return ResponseEntity.badRequest().build(); // ID mismatch or missing ID in the request body
         }
-        Book result = bookService.saveBook(book);
+        Book result = bookService.updateBook(id, book);
         return ResponseEntity.ok().body(result);
     }
 
