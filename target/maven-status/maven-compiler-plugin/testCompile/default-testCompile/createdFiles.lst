@@ -1,1 +1,4 @@
+com/baraki/librarymanagement/controllers/BookControllerTest.class
 com/baraki/librarymanagement/LibraryManagementApplicationTests.class
+com/baraki/librarymanagement/controllers/BorrowingRecordControllerTest.class
+com/baraki/librarymanagement/controllers/PatronControllerTest.class
