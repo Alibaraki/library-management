@@ -33,7 +33,7 @@ public class BookService {
 
     /**
      * Retrieves a book by its ID.
-     * @param id the ID of the book to retrieve.
+     *
      * @return an Optional containing the book if found, or empty otherwise.
      */
     public Optional<Book> findBookById(Long id) {
@@ -42,7 +42,7 @@ public class BookService {
 
     /**
      * Saves a book to the repository.
-     * @param book the book to be saved.
+     *
      * @return the saved book.
      */
     @Transactional
@@ -65,12 +65,10 @@ public class BookService {
 
     /**
      * Deletes a book from the repository.
-     * @param id the ID of the book to be deleted.
+     *
      */
     @Transactional
     public void deleteBook(Long id) {
         bookRepository.deleteById(id);
     }
-
-    // Additional business logic and methods can be added here as needed
 }

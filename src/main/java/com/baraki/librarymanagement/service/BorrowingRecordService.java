@@ -32,7 +32,7 @@ public class BorrowingRecordService {
 
     /**
      * Retrieves a borrowing record by its ID.
-     * @param id the ID of the borrowing record to retrieve.
+     *
      * @return an Optional containing the borrowing record if found, or empty otherwise.
      */
     public Optional<BorrowingRecord> findBorrowingRecordById(Long id) {
@@ -41,7 +41,7 @@ public class BorrowingRecordService {
 
     /**
      * Saves a borrowing record to the repository.
-     * @param borrowingRecord the borrowing record to be saved.
+     *
      * @return the saved borrowing record.
      */
 
@@ -52,12 +52,10 @@ public class BorrowingRecordService {
 
     /**
      * Deletes a borrowing record from the repository.
-     * @param id the ID of the borrowing record to be deleted.
+     *
      */
     @Transactional
     public void deleteBorrowingRecord(Long id) {
         borrowingRecordRepository.deleteById(id);
     }
-
-    // Additional business logic and methods can be added here as needed
 }

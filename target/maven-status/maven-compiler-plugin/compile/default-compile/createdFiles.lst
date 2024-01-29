@@ -3,6 +3,7 @@ com/baraki/librarymanagement/repository/BookRepository.class
 com/baraki/librarymanagement/exception/GlobalExceptionHandler.class
 com/baraki/librarymanagement/model/Book.class
 com/baraki/librarymanagement/model/Patron.class
+com/baraki/librarymanagement/service/CustomUserDetailsService.class
 com/baraki/librarymanagement/controllers/BorrowingRecordController.class
 com/baraki/librarymanagement/exception/GlobalExceptionHandler$ErrorResponse.class
 com/baraki/librarymanagement/repository/PatronRepository.class

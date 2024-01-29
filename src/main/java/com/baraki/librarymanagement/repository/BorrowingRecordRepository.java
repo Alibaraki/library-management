@@ -12,31 +12,29 @@ import java.util.Optional;
 
 /**
  * Repository interface for the BorrowingRecord entity.
- * This interface extends JpaRepository, providing CRUD operations and more for BorrowingRecord entities.
+ *
  */
 @Repository
 public interface BorrowingRecordRepository extends JpaRepository<BorrowingRecord, Long> {
 
     /**
      * Find borrowing records by book.
-     * @param book The book associated with the borrowing record.
+     *
      * @return A list of borrowing records for the specified book.
      */
     List<BorrowingRecord> findByBook(Book book);
 
     /**
      * Find borrowing records by patron.
-     * @param patron The patron who borrowed the books.
+     *
      * @return A list of borrowing records for the specified patron.
      */
     List<BorrowingRecord> findByPatron(Patron patron);
 
     /**
      * Find borrowing records by the borrow date.
-     * @param borrowDate The date the book was borrowed.
+     *
      * @return A list of borrowing records for the specified borrow date.
      */
     List<BorrowingRecord> findByBorrowDate(Date borrowDate);
-
-    // Additional custom query methods can be defined here
 }

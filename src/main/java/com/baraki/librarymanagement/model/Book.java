@@ -95,7 +95,7 @@ public class Book implements Serializable {
         this.isbn = isbn;
     }
 
-    // equals and hashCode
+    // equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

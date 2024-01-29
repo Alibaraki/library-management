@@ -35,7 +35,7 @@ public class BorrowingRecordController {
 
     /**
      * GET  /api/borrowing-records/{id} : Get the "id" borrowing record.
-     * @param id the id of the borrowing record to retrieve.
+     *
      * @return the ResponseEntity with status 200 (OK) and with body the borrowing record, or with status 404 (Not Found).
      */
     @GetMapping("/{id}")
@@ -47,7 +47,7 @@ public class BorrowingRecordController {
 
     /**
      * POST  /api/borrowing-records : Create a new borrowing record.
-     * @param borrowingRecord the borrowing record to create.
+     *
      * @return the ResponseEntity with status 201 (Created) and with body the new borrowing record, or with status 400 (Bad Request) if the borrowing record has already an ID.
      */
     @PostMapping
@@ -61,8 +61,8 @@ public class BorrowingRecordController {
 
     /**
      * PUT  /api/borrowing-records/{id} : Updates an existing borrowing record.
-     * @param id the id of the borrowing record to update.
-     * @param borrowingRecordDetails the borrowing record details to update.
+     *
+     *
      * @return the ResponseEntity with status 200 (OK) and with body the updated borrowing record,
      * or with status 400 (Bad Request) if the borrowing record is not valid,
      * or with status 500 (Internal Server Error) if the borrowing record couldn't be updated.
@@ -78,7 +78,7 @@ public class BorrowingRecordController {
 
     /**
      * DELETE  /api/borrowing-records/{id} : delete the "id" borrowing record.
-     * @param id the id of the borrowing record to delete.
+     *
      * @return the ResponseEntity with status 200 (OK).
      */
     @DeleteMapping("/{id}")
@@ -86,6 +86,4 @@ public class BorrowingRecordController {
         borrowingRecordService.deleteBorrowingRecord(id);
         return ResponseEntity.ok().build();
     }
-
-    // Additional endpoints or utility methods can be added here as needed
 }

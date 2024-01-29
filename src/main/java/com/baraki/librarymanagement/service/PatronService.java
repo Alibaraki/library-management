@@ -24,7 +24,7 @@ public class PatronService {
 
     /**
      * Retrieves all patrons from the repository.
-     * @return a list of all patrons.
+     *
      */
     public List<Patron> findAllPatrons() {
         return patronRepository.findAll();
@@ -32,7 +32,7 @@ public class PatronService {
 
     /**
      * Retrieves a patron by their ID.
-     * @param id the ID of the patron to retrieve.
+     *
      * @return an Optional containing the patron if found, or empty otherwise.
      */
     public Optional<Patron> findPatronById(Long id) {
@@ -41,7 +41,7 @@ public class PatronService {
 
     /**
      * Saves a patron to the repository.
-     * @param patron the patron to be saved.
+     *
      * @return the saved patron.
      */
     @Transactional
@@ -51,8 +51,7 @@ public class PatronService {
 
     /**
      * Updates a patron with new details.
-     * @param patronId the ID of the patron to update.
-     * @param newPatronDetails patron object containing new details.
+     *
      * @return the updated patron.
      */
     @Transactional
@@ -66,12 +65,10 @@ public class PatronService {
 
     /**
      * Deletes a patron from the repository.
-     * @param id the ID of the patron to be deleted.
+     *
      */
     @Transactional
     public void deletePatron(Long id) {
         patronRepository.deleteById(id);
     }
-
-    // Additional business logic and methods can be added here as needed
 }

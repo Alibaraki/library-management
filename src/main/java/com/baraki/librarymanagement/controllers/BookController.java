@@ -25,7 +25,7 @@ public class BookController {
 
     /**
      * GET  /api/books : Get all the books.
-     * @return the ResponseEntity with status 200 (OK) and the list of books in body.
+     *
      */
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks() {
@@ -35,7 +35,7 @@ public class BookController {
 
     /**
      * GET  /api/books/{id} : Get the "id" book.
-     * @param id the id of the book to retrieve.
+     *
      * @return the ResponseEntity with status 200 (OK) and with body the book, or with status 404 (Not Found).
      */
     @GetMapping("/{id}")
@@ -47,7 +47,7 @@ public class BookController {
 
     /**
      * POST  /api/books : Create a new book.
-     * @param book the book to create.
+     *
      * @return the ResponseEntity with status 201 (Created) and with body the new book, or with status 400 (Bad Request) if the book has already an ID.
      */
     @PostMapping
@@ -58,8 +58,7 @@ public class BookController {
 
     /**
      * PUT  /api/books/{id} : Updates an existing book.
-     * @param id the id of the book to update.
-     * @param book the book to update.
+     *
      * @return the ResponseEntity with status 200 (OK) and with body the updated book,
      * or with status 400 (Bad Request) if the book is not valid,
      * or with status 500 (Internal Server Error) if the book couldn't be updated.
@@ -75,7 +74,7 @@ public class BookController {
 
     /**
      * DELETE  /api/books/{id} : delete the "id" book.
-     * @param id the id of the book to delete.
+     *
      * @return the ResponseEntity with status 200 (OK).
      */
     @DeleteMapping("/{id}")
@@ -83,6 +82,4 @@ public class BookController {
         bookService.deleteBook(id);
         return ResponseEntity.ok().build();
     }
-
-    // Additional endpoints or utility methods can be added here as needed
 }

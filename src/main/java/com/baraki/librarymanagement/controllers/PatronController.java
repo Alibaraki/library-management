@@ -34,7 +34,7 @@ public class PatronController {
 
     /**
      * GET  /api/patrons/{id} : Get the "id" patron.
-     * @param id the id of the patron to retrieve.
+     *
      * @return the ResponseEntity with status 200 (OK) and with body the patron, or with status 404 (Not Found).
      */
     @GetMapping("/{id}")
@@ -46,7 +46,7 @@ public class PatronController {
 
     /**
      * POST  /api/patrons : Create a new patron.
-     * @param patron the patron to create.
+     *
      * @return the ResponseEntity with status 201 (Created) and with body the new patron, or with status 400 (Bad Request) if the patron has already an ID.
      */
     @PostMapping
@@ -60,8 +60,7 @@ public class PatronController {
 
     /**
      * PUT  /api/patrons/{id} : Updates an existing patron.
-     * @param id the id of the patron to update.
-     * @param patronDetails the patron details to update.
+     *
      * @return the ResponseEntity with status 200 (OK) and with body the updated patron,
      * or with status 400 (Bad Request) if the patron is not valid,
      * or with status 500 (Internal Server Error) if the patron couldn't be updated.
@@ -78,7 +77,7 @@ public class PatronController {
 
     /**
      * DELETE  /api/patrons/{id} : delete the "id" patron.
-     * @param id the id of the patron to delete.
+     *
      * @return the ResponseEntity with status 200 (OK).
      */
     @DeleteMapping("/{id}")
@@ -86,6 +85,4 @@ public class PatronController {
         patronService.deletePatron(id);
         return ResponseEntity.ok().build();
     }
-
-    // Additional endpoints or utility methods can be added here as needed
 }

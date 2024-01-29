@@ -6,6 +6,7 @@
 /Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/model/Book.java
 /Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/exception/ResourceNotFoundException.java
 /Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/exception/GlobalExceptionHandler.java
+/Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/service/CustomUserDetailsService.java
 /Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/model/Patron.java
 /Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/controllers/PatronController.java
 /Users/alibaraki/Desktop/library-management/src/main/java/com/baraki/librarymanagement/service/BorrowingRecordService.java
