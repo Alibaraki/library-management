@@ -1,4 +1,7 @@
 Library Management System API
+
+
+
 Overview
 The Library Management System API, developed using Spring Boot, enables librarians to manage books, patrons, and borrowing records efficiently. This RESTful API supports CRUD operations and ensures data integrity through transaction management.
 
@@ -9,7 +12,7 @@ Maven
 Any relational database (e.g., H2, MySQL, PostgreSQL) set up and configured
 Installation
 Clone the repository:
-git clone https://github.com/[your-username]/library-management.git
+git clone https://github.com/Alibaraki/library-management.git
 Navigate to the project directory:
 cd library-management
 Build the project using Maven:
